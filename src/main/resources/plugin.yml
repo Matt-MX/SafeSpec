@@ -1,0 +1,21 @@
+name: Safespectator
+version: ${project.version}
+main: com.mattmx.safespectator.Main
+api-version: 1.16
+prefix: SSpec
+authors: [ MattMX ]
+description: Safely allow GMSP (for EUPVP)
+website: https://www.mattmx.com/
+commands:
+  s:
+    description: Default command for SafeSpec
+    aliases:
+      - safespec
+      - spec
+permissions:
+  safespec.list:
+    description: View a list of players in spectate mode
+  safespec.spec:
+    description: Allows you to enter spectator mode
+  safespec.reload:
+    description: Allows you to reload config.yml

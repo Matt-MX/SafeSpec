@@ -1,0 +1,30 @@
+# Plugin prefix
+prefix: '#ff1900&o&lS#ff3300&o&la#ff4d00&o&lf#ff6700&o&le#ff8100&o&lS#ff9b00&o&lp#ffb500&o&le#ffcf00&o&lc'
+
+#Announce when a player enters or exits spectator.
+announce-spec: true
+# %prefix% - prefix
+# %player% - Targeted player display name
+# %action% - Will appear as 'entered' or 'exited'
+announce-spec-msg: '%prefix% &f> &6%player% &chas %action% spectator.'
+
+# Command cooldown for /s
+# Default setting is 0, meaning no cooldown.
+command-cooldown: 2
+
+# Message displayed if sender has no permissions to execute.
+no-perms-msg: '%prefix% &f> &cYou do not have permissions.'
+
+# If a player tries to execute a disallowed command while in spectator.
+anti-command-msg: '%prefix% &f> &cYou cant do this while in spectator.'
+
+# If the player is on cooldown, (%action% is the time in seconds they have to wait)
+wait-msg: '%prefix% &f> &cPlease wait %action%s before doing that.'
+
+###############################
+#     Permission Nodes        #
+###############################
+# safespec.       - Main perm node 'safespec.{sub-node}' eg: 'safespec.list'
+#         list    - Access command /s list to view players currently in gmsp
+#         reload  - Access command /s reload (Should be admin only)
+#         spec    - Access command /s and toggle between spectator and survival.
