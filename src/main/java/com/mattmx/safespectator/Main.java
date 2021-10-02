@@ -64,18 +64,18 @@ public final class Main extends JavaPlugin {
 
     public static void exitSpec(Player p) {
         if (PLAYERS.containsKey(p)) {
+            if (ANNOUNCESPEC) Bukkit.broadcastMessage(Utils.chat(Utils.format(Main.ANNOUNCEMSG, p, "exited")));
             p.teleport(PLAYERS.get(p));
             p.setGameMode(GameMode.SURVIVAL);
             PLAYERS.remove(p);
-            if (ANNOUNCESPEC) Bukkit.broadcastMessage(Utils.chat(Utils.format(Main.ANNOUNCEMSG, p, "exited")));
         }
     }
 
     public static void enterSpec(Player p) {
         if (!PLAYERS.containsKey(p)) {
+            if (ANNOUNCESPEC) Bukkit.broadcastMessage(Utils.chat(Utils.format(Main.ANNOUNCEMSG, p, "entered")));
             p.setGameMode(GameMode.SPECTATOR);
             PLAYERS.put(p, p.getLocation());
-            if (ANNOUNCESPEC) Bukkit.broadcastMessage(Utils.chat(Utils.format(Main.ANNOUNCEMSG, p, "entered")));
         }
     }
 
